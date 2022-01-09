@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - Datum
 struct Datum: Codable {
     let id: Int

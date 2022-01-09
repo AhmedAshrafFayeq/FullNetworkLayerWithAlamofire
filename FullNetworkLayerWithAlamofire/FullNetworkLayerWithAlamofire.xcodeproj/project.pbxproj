@@ -21,6 +21,7 @@
 		2D40393D278AE5B400E54222 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40393C278AE5B400E54222 /* Constants.swift */; };
 		2D403942278AFC7F00E54222 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D403941278AFC7F00E54222 /* UserModel.swift */; };
 		2D403947278B30EF00E54222 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D403946278B30EF00E54222 /* BaseResponse.swift */; };
+		2D40394B278B35DE00E54222 /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D40394A278B35DE00E54222 /* APError.swift */; };
 		50666979AA435CEB721F13D5 /* Pods_FullNetworkLayerWithAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB81ABF2C11C7D24AAAB04D3 /* Pods_FullNetworkLayerWithAlamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		2D40393C278AE5B400E54222 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D403941278AFC7F00E54222 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2D403946278B30EF00E54222 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		2D40394A278B35DE00E54222 /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		39EE96E6D04F6DC6F5F1EA1E /* Pods-FullNetworkLayerWithAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullNetworkLayerWithAlamofire.release.xcconfig"; path = "Target Support Files/Pods-FullNetworkLayerWithAlamofire/Pods-FullNetworkLayerWithAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 		DB81ABF2C11C7D24AAAB04D3 /* Pods_FullNetworkLayerWithAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullNetworkLayerWithAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2D40393C278AE5B400E54222 /* Constants.swift */,
+				2D40394A278B35DE00E54222 /* APError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				2D403934278ADB6100E54222 /* User.swift in Sources */,
 				2D403929278A393300E54222 /* UserNetworking.swift in Sources */,
 				2D403930278ADB1600E54222 /* UserApi.swift in Sources */,
+				2D40394B278B35DE00E54222 /* APError.swift in Sources */,
 				2D40390F278A38B000E54222 /* SceneDelegate.swift in Sources */,
 				2D403942278AFC7F00E54222 /* UserModel.swift in Sources */,
 				2D403947278B30EF00E54222 /* BaseResponse.swift in Sources */,

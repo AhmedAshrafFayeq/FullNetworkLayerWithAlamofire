@@ -9,14 +9,14 @@ import Foundation
 
 // protocol oriented
 protocol UserAPIProtocol {
-    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, NSError>)-> Void)
+    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, APError>)-> Void)
 }
 
 class UserAPI: BaseApi<UserNetworking>, UserAPIProtocol{
     
     // MARK: - Requests
     
-    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, NSError>)-> Void){
+    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, APError>)-> Void){
         self.fetchData(target: .getUsers, responseClass: BaseResponse<[Datum]>.self) { (result) in
             completion(result)
         }
