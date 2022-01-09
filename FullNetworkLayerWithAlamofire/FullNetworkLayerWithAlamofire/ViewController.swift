@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var api: UserAPIProtocol = UserAPI()
-    var users: [User] = []
+    var users: [Datum] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         getUsers()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
                 guard let response = response else{return}
                 self.users = response.data
                 for user in self.users{
-                    print(user.firstName)
+                    print(user.employeeName)
                 }
             case .failure(let error):
                 print(error)

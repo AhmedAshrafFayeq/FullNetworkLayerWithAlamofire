@@ -16,6 +16,8 @@ enum UserNetworking {
 extension UserNetworking: TargetType{
     var baseURL: String {
         switch self {
+        case .getUsers:
+            return "http://dummy.restapiexample.com/api/v1"
         default:
             return Constants.baseUrl
         }
@@ -24,9 +26,9 @@ extension UserNetworking: TargetType{
     var path: String {
         switch self {
         case .getUsers:
-            return Constants.usersApi       //   "/users"
+            return "/employees"
         case .createUser:
-            return Constants.usersApi
+            return Constants.usersApi   // "/users"
         }
     }
     
