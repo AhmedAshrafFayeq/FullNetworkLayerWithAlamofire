@@ -7,12 +7,6 @@
 
 import Foundation
 
-// MARK: - UserModel
-struct UserModel: Codable {
-    let status: String
-    let data: [Datum]
-    let message: String
-}
 
 // MARK: - Datum
 struct Datum: Codable {
