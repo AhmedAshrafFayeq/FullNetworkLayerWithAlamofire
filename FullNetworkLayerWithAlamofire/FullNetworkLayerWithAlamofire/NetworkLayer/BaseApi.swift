@@ -16,26 +16,32 @@ class BaseApi<T:TargetType> {
         let params  = buildParams(task: target.task)
         AF.request(target.baseURL + target.path, method: method, parameters:params.0, encoding: params.1, headers: headers).responseJSON { (response) in
             guard let statusCode = response.response?.statusCode else {
-                completion(.failure(NSError()))
+                let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
+                completion(.failure(error))
                 return
             }
             if statusCode == 200 {
                 guard let jsonResponse = try? response.result.get() else {
-                    completion(.failure(NSError()))
+                    let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
+                    completion(.failure(error))
                     return
                 }
                 guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonResponse, options: []) else {
-                    completion(.failure(NSError()))
+                    let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
+                    completion(.failure(error))
                     return
                 }
                 guard let jsonResponseObject = try? JSONDecoder().decode(M.self, from: jsonData) else {
-                    completion(.failure(NSError()))
+                    let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
+                    completion(.failure(error))
                     return
                 }
                 completion(.success(jsonResponseObject))
                 
-            }else{
-                completion(.failure(NSError())) // 404 / 401 notFound, unAuthorized
+            }else{ // add custom error based on status code 404 / 401 notFound, unAuthorized
+                let errorMsg = "Error message parsed from server"
+                let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: errorMsg])
+                completion(.failure(error))
             }
         }
     }
