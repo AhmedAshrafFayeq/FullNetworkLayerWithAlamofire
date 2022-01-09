@@ -17,16 +17,16 @@ extension UserNetworking: TargetType{
     var baseURL: String {
         switch self {
         default:
-            return "https://reqres.in/api"
+            return Constants.baseUrl
         }
     }
     
     var path: String {
         switch self {
         case .getUsers:
-            return "/users"
+            return Constants.usersApi       //   "/users"
         case .createUser:
-            return "/users"
+            return Constants.usersApi
         }
     }
     

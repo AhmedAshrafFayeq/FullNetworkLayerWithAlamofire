@@ -21,6 +21,7 @@ enum Task {
     case requestParmeters(parameters: [String: Any], encoding: ParameterEncoding)
 }
 
+//wrapper for api call
 protocol TargetType {
     var baseURL: String {get}
     var path: String {get}  //after baseUrl
