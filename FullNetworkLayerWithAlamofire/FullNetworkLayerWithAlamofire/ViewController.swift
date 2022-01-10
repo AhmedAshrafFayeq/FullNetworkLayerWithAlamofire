@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                     print(user.employeeName)
                 }
             case .failure(let error):
-                print(error.rawValue)
+                print(error.errorDescription)
             }
         })
     }

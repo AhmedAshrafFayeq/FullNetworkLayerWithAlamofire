@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import Alamofire
 
 // protocol oriented
 protocol UserAPIProtocol {
-    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, APError>)-> Void)
+    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, AFError>)-> Void)
 }
 
 class UserAPI: BaseApi<UserNetworking>, UserAPIProtocol{
     
     // MARK: - Requests
     
-    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, APError>)-> Void){
+    func getUsers(completion: @escaping (Result<BaseResponse<[Datum]>?, AFError>)-> Void){
         self.fetchData(target: .getUsers, responseClass: BaseResponse<[Datum]>.self) { (result) in
             completion(result)
         }
