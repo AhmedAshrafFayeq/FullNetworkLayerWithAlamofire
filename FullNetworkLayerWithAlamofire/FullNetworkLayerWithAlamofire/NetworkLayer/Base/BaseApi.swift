@@ -55,3 +55,5 @@ class BaseApi<T:TargetType> {
 
 
 //let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.genericError])
+
+//.responseDecodable { (response: DataResponse<M, AFError>) in
