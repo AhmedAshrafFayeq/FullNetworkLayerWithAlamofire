@@ -22,4 +22,3 @@ struct Datum: Codable {
         case profileImage = "profile_image"
     }
 }
-
